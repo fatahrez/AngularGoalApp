@@ -18,4 +18,8 @@ export class GoalDetailComponent implements OnInit {
   goalComplete(complete: boolean) {
     this.isComplete.emit(complete);
   }
+
+  goalDelete(b: boolean) {
+    this.isComplete.emit(b);
+  }
 }

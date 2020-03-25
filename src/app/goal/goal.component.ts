@@ -31,4 +31,19 @@ export class GoalComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteGoal(isComplete, index) {
+    if (isComplete) {
+      const toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}?`);
+      if (toDelete) {
+        this.goals.splice(index, 1);
+      }
+    }
+  }
+
+  addNewGoal(goal) {
+    const goalLength = this.goals.length;
+    goal.id = goalLength + 1;
+    goal.completeDate = new Date(goal.completeDate)
+    this.goals.push(goal);
+  }
 }
