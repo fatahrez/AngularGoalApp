@@ -7,7 +7,6 @@ import {Goal} from '../goal';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-  title = 'Goal App';
   goals: Goal[] = [
     new Goal(1, 'Watching Find Nemo', 'Torrent the movie and watch it online', new Date(2020, 3, 14)),
     new Goal(2, 'Buy Cookies', 'Go to the store and the buy oreo cookies', new Date(2020, 3, 14)),
